@@ -1,0 +1,16 @@
+{
+  "name": "aequitas-labs",
+  "owner": {
+    "name": "Aequitas Labs"
+  },
+  "metadata": {
+    "description": "Aequitas Labs agent skills, shared by every repo."
+  },
+  "plugins": [
+    {
+      "name": "agent-skills",
+      "source": "./",
+      "description": "Shared agent skills for every repo: product-copy and plain-technical-writing."
+    }
+  ]
+}
