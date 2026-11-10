@@ -28,7 +28,7 @@ Add the marketplace and enable the plugin in the repo's checked-in `.claude/sett
 
 To install it for yourself only, in any folder, run `/plugin install agent-skills --marketplace aequitas-labs/agent-skills`.
 
-When you trust a repo's folder, Claude Code offers to install the marketplace and the plugin. If it doesn't, run `/plugin` and install `agent-skills` from `aequitas-labs`, or `claude plugin install agent-skills@aequitas-labs --scope local`. Don't use `--scope project`: it rewrites the checked-in `.claude/settings.json` and can drop keys. The skills then show as `agent-skills:product-copy` and `agent-skills:plain-technical-writing`. The repo is private, so you need read access to `aequitas-labs/agent-skills` through `gh` or git.
+When you trust a repo's folder, Claude Code offers to install the marketplace and the plugin. If it doesn't, run `/plugin` and install `agent-skills` from `aequitas-labs`, or `claude plugin install agent-skills@aequitas-labs --scope local`. Don't use `--scope project`: it rewrites the checked-in `.claude/settings.json` and can drop keys. The skills then show as `agent-skills:product-copy` and `agent-skills:plain-technical-writing`.
 
 Then point the repo's `AGENTS.md` at the skills:
 
@@ -42,7 +42,7 @@ Then point the repo's `AGENTS.md` at the skills:
 Codex loads skills from `~/.codex/skills` (or `$CODEX_HOME/skills`). Install them once per machine:
 
 ```bash
-gh repo clone aequitas-labs/agent-skills ~/.agent-skills && ~/.agent-skills/install-codex.sh
+git clone https://github.com/aequitas-labs/agent-skills ~/.agent-skills && ~/.agent-skills/install-codex.sh
 ```
 
 The script links each skill folder into Codex's skills folder, so `git -C ~/.agent-skills pull` updates them. It skips a skill whose name is already taken by a folder it didn't link.
